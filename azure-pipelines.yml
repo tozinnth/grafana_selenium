@@ -2,16 +2,16 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest' 
+  vmImage: 'ubuntu-latest'
 
 steps:
 - script: |
-    python3 -m venv venv
+    python -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
-    pip3 install pytest
-  displayName: 'Install dependencies'
-
-- script: |
+    pip install pytest
+    echo "PATH=$PATH"
+    echo "VIRTUAL_ENV=$VIRTUAL_ENV"
+    ls -l $VIRTUAL_ENV/bin
     pytest -v -s test_grafana.py
   displayName: 'Run UI tests'
