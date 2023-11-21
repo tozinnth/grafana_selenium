@@ -1,3 +1,4 @@
-pytest==7.4.3
-selenium==4.0.0
-allure-commons==2.13.9
+selenium==3.14.0
+sauceclient>=0.2.1
+pytest==4.4.0
+pytest-xdist

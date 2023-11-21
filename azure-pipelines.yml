@@ -11,8 +11,6 @@ steps:
     python -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
-    pip install allure-commons==2.13.9  # Ensure allure-commons is installed
-    pip install pytest==7.4.3
     pytest -v -s test_grafana.py
   displayName: 'Run UI tests'
 - script: |
