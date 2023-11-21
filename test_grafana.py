@@ -8,8 +8,8 @@ from selenium.webdriver.common import keys
 class TestGrafana:
     def test_logo(self):
         self.driver = webdriver.Chrome()
-        self.driver.get("https://google.com")
-        if self.driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div/img").is_displayed():
+        self.driver.get("https://www.saucedemo.com/")
+        if self.driver.find_element(By.ID, "user-name").is_displayed():
             assert True
         else:
             assert False
@@ -18,15 +18,13 @@ class TestGrafana:
 
     def test_login(self):
         self.driver = webdriver.Chrome()
-        self.driver.get("https://google.com")
-        self.driver.find_element(By.NAME, 'q').send_keys("seleniumtest")
-        self.driver.find_element(By.XPATH, "/html/body/div[1]/div[3]/form/div[1]/div[1]/div[4]/center/input[1]").click()
-        if self.driver.title == "Grafana":
-            self.driver.quit()
+        self.driver.get("https://www.saucedemo.com/")
+        if self.driver.find_element(By.ID, "password").is_displayed():
             assert True
         else:
-            self.driver.quit()
             assert False
+
+        self.driver.close()
 
     def test_input(self):
         pytest.skip("Skipping for now")
