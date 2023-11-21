@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="1" tests="4" time="9.687" timestamp="2023-11-21T11:55:04.584437" hostname="NL_J5J6GD4V0H"><testcase classname="test_grafana.TestGrafana" name="test_logo" time="5.676" /><testcase classname="test_grafana.TestGrafana" name="test_login" time="3.229" /><testcase classname="test_grafana.TestGrafana" name="test_input" time="0.000"><skipped type="pytest.skip" message="Skipping for now">/Users/oozcan006/PycharmProjects/pythonProject2/demotestreports/test_grafana.py:36: Skipping for now</skipped></testcase><testcase classname="test_sample" name="test_answer" time="0.000"><failure message="assert 4 == 5&#10; +  where 4 = func(3)">def test_answer():
+&gt;       assert func(3) == 5
+E       assert 4 == 5
+E        +  where 4 = func(3)
+
+test_sample.py:7: AssertionError</failure></testcase></testsuite></testsuites>
