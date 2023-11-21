@@ -1,0 +1,17 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    python -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    pip install pytest
+    echo "PATH=$PATH"
+    echo "VIRTUAL_ENV=$VIRTUAL_ENV"
+    ls -l $VIRTUAL_ENV/bin
+    pytest -v -s test_grafana.py
+  displayName: 'Run UI tests'
